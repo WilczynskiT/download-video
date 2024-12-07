@@ -32,7 +32,7 @@ Instruction:
 
 7. replace number with "{no}", example: https://d2vn0zi4e5kfuy.cloudfront.net/prod/binary/2023/11/20/21/art_7447072/1595772789217-jugr68/2011N376XR_dssa_da{no}.ts
 
-8. run: PizzaBaker.sh "https://d2vn0zi4e5kfuy.cloudfront.net/prod/binary/2023/11/20/21/art_7447072/1595772789217-jugr68/2011N376XR_dssa_da{no}.ts"
+8. run: DownloadVideo.sh "https://d2vn0zi4e5kfuy.cloudfront.net/prod/binary/2023/11/20/21/art_7447072/1595772789217-jugr68/2011N376XR_dssa_da{no}.ts"
 
 9. wait until terminal finish work 
 
