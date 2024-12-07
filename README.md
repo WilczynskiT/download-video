@@ -1,4 +1,4 @@
-# PizzaBaker
+# DownloadVideo
 
 Copyright © 2023-2024 Wilcz.com. All Rights Reserved.
 
@@ -12,9 +12,9 @@ https://wilcz.com
 It is bash script to download video chunks and merge it into single .ts file.
 It could be use to capture videos from websites where it is not possible from UI.
 
-## PizzaBaker.sh
+## DownloadVideo.sh
 
-PizzaBaker.sh [-t] [Video URL with {no}]
+DownloadVideo.sh [Video URL with {no}]
 
 Instruction:
 
@@ -38,5 +38,6 @@ Instruction:
 
 10. done! you can convert this video from ts to mp4 using external software or play it using VLC media player
 
-*If you want to check temporary files use -t, they will not be deleted.*
+*If you want to check temporary files use -t, they will not be deleted.
+Like: DownloadVideo.sh -t [Video URL with {no}]*
 
