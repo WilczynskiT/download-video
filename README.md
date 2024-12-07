@@ -1,6 +1,6 @@
 # PizzaBaker
 
-Copyright © 2023 Tomasz Wilczyński. All Rights Reserved.
+Copyright © 2023-2024 Wilcz.com. All Rights Reserved.
 
 License: AGPL-3.0
 
