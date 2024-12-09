@@ -30,7 +30,6 @@ url_format=$1
 
 # download video parts
 
-
 mkdir temp-files
 cd temp-files
 
@@ -50,28 +49,30 @@ done
 
 cd ..
 
-# make video from parts
+# check is the name available
 
-new_name="video.ts"
+new_name="video"
 
 while true; do
-    if [ -f "$new_name" ]; then
+    if [ -f "$new_name.ts" ] || [ -f "$new_name.mp4" ]; then
     	j=$((j + 1))
-        new_name="video($j).ts"
+        new_name="video($j)"
     else
         break
     fi
 done
 
-# Count the total number of files in the directory
+cd temp-files
 
-total_files=$(ls -1 temp-files/temp-file-*.ts 2>/dev/null | wc -l)
+# Merging
+
+total_files=$(ls -1 temp-file-*.ts 2>/dev/null | wc -l)
 
 completed=0
 
 for ((i = 1; i <= total_files; i++)); do
-    if [ -f "temp-files/temp-file-$i.ts" ]; then
-        cat "temp-files/temp-file-$i.ts" >> "$new_name"
+    if [ -f "temp-file-$i.ts" ]; then
+        cat "temp-file-$i.ts" >> "temp-video.ts"
         completed=$((complete + 1))
         percentage=$((complete * 100 / total_files))
         echo -ne "Progress: $percentage% \r" # -ne to overwrite the same line
@@ -79,6 +80,13 @@ for ((i = 1; i <= total_files; i++)); do
 done
 
 echo -ne "Merging completed! \r"
+
+# Converting to mp4
+
+cd ..
+ffmpeg -i temp-files/temp-video.ts $new_name.mp4
+
+# Delete temporary data
 
 if [ "$delete_temp" = true ]; then
     cd temp-files
@@ -88,5 +96,5 @@ if [ "$delete_temp" = true ]; then
     echo -ne "Temp files deleted! \r"
 fi
 
-echo -ne "\r File $new_name is ready!"
+echo -ne "\r File $new_name.mp4 is ready!"
 echo ""
