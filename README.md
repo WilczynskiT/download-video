@@ -1,4 +1,4 @@
-# DownloadVideo
+# download_video.sh
 
 Copyright © 2023-2024 Wilcz.com. All Rights Reserved.
 
@@ -6,15 +6,16 @@ License: AGPL-3.0
 
 https://wilcz.com
 
-##
+## 
+
 ### Welcome!
 
 It is bash script to download video chunks and merge it into single .ts file.
 It could be use to capture videos from websites where it is not possible from UI.
 
-## DownloadVideo.sh
+## download_video.sh
 
-DownloadVideo.sh [Video URL with {no}]
+download_video.sh [Video URL with {no}]
 
 Instruction:
 
@@ -32,12 +33,11 @@ Instruction:
 
 7. replace number with "{no}", example: https://d2vn0zi4e5kfuy.cloudfront.net/prod/binary/2023/11/20/21/art_7447072/1595772789217-jugr68/2011N376XR_dssa_da{no}.ts
 
-8. run: DownloadVideo.sh "https://d2vn0zi4e5kfuy.cloudfront.net/prod/binary/2023/11/20/21/art_7447072/1595772789217-jugr68/2011N376XR_dssa_da{no}.ts"
+8. run: download_video.sh "https://d2vn0zi4e5kfuy.cloudfront.net/prod/binary/2023/11/20/21/art_7447072/1595772789217-jugr68/2011N376XR_dssa_da{no}.ts"
 
 9. wait until terminal finish work 
 
 10. done! you can convert this video from ts to mp4 using external software or play it using VLC media player
 
 *If you want to check temporary files use -t, they will not be deleted.
-Like: DownloadVideo.sh -t [Video URL with {no}]*
-
+Like: download_video.sh -t [Video URL with {no}]*
