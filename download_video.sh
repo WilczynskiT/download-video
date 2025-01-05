@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Usage: DownloadVideo.sh "https://example-url-with-{no}-of-video"
+# Usage: download_video.sh "https://example-url-with-{no}-of-video"
 
 delete_temp=true
 
@@ -98,3 +98,4 @@ fi
 
 echo -ne "\r File $new_name.mp4 is ready!"
 echo ""
+
